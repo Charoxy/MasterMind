@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MasterMind</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <div id="start">
+        <h1>MasterMind the Game</h1>
+        <div class="difficultySelec">
+            <p class="buttonDifficulty" onclick="setMaxTentative(14);setScoreBoard()">Normal</p>
+            <p class="buttonDifficulty" onclick="setMaxTentative(8);setScoreBoard()">Hard</p>
+            <p class="buttonDifficulty" onclick="setMaxTentative(5);setScoreBoard()">Cauchemar</p>
+        </div>
+    </div>
+    <div id="enable">
+        <div class="historique" id="historique">
+            <h1>Historique</h1>
+        </div>
+
+        <div>
+            <h1>MasterMind the Game</h1>
+            <h2 id="nb">Nombre de tentative : 0</h2>
+            <div class="jeu">
+                <div class="ligne">
+                    <div id="select-1" onclick=setColorToCase("select-1")></div>
+                    <div id="select-2" onclick=setColorToCase("select-2")></div>
+                    <div id="select-3" onclick=setColorToCase("select-3")></div>
+                    <div id="select-4" onclick=setColorToCase("select-4")></div>
+                </div>
+                <div class="button" onclick="essayer()">essayer</div>
+            </div>
+            <div class="selection-flex">
+                <div class="ligne">
+                    <div class="selection-button" id="selection-rouge" style="background-color: #ff001c" onclick="setColorSelection(1)"></div>
+                    <div class="selection-button" id="selection-vert" style="background-color: #55ff00" onclick="setColorSelection(2)"></div>
+                    <div class="selection-button" id="selection-orange" style="background-color: #ff8800" onclick="setColorSelection(3)"></div>
+                    <div class="selection-button" id="selection-bleu" style="background-color: #988eff" onclick="setColorSelection(4)"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="scoreBoard" id="score">
+            <h1>ScoreBoard</h1>
+            <input type="text" name="pseudo" id="pseudo" placeholder="Pseudo">
+            <p class="buttonSave" onclick="SaveScoreInFile()">Save</p>
+        </div>
+
+    </div>
+
+
+</body>
+</html>
